@@ -1,6 +1,6 @@
 # Job Assistant RAG
 
-This project works with **DWI reports data** to extract:
+This project works with **DIW reports data** to extract:
 - Story context
 - Past, Present, and Future context  
 It also generates charts and visualizations for better understanding.
