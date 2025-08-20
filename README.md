@@ -1,4 +1,5 @@
-# Job Assistant RAG
+# Story Labs (Gernarted Strory from the data)
+
 
 This project works with **DIW reports data** to extract:
 - Story context
