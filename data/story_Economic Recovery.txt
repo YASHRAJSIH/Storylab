@@ -1,0 +1,19 @@
+| significantly slower than in the past. The German economy is expected to continue its recovery, (dwr-24-35.pdf p.16) | with real GDP growth of 2.6 percent in 2023, 2.7 percent in 2024, and 2.1 percent in 2025.
+
+Paragraph 1 (Past):
+In the aftermath of the global financial crisis, the German economy faced a significant downturn. However, with the recovery over the coming years, the output was projected to rebound, growing at a rate of 1.5 percent in 2024 and 1.8 percent in 2026 (dwr-24-35.pdf p.16). Measures such as the expansion of the research allowance and the assumed interest rate cuts played a crucial role in this recovery (dwr-24-35.pdf p.15). However, the impact of the Vocational Training and Continuing Education Act, expiring coronavirus measures, and corporate aid were not taken into account in these forecasts.
+
+Paragraph 2 (Present):
+The German economy is currently experiencing a recovery, supported by the manufacturing industry and a brightening sentiment among businesses and consumers (dwr-24-10.pdf p.10). Surveys indicate a lower propensity to save and a greater willingness to spend, which could lead to increased consumption and a similar rate of growth to exports (dwr-24-24.pdf p.10). This recovery is, however, subject to many uncertainty factors.
+
+Paragraph 3 (Future):
+The global economy is continuing on its recovery path but is expected to grow significantly slower
+
+**References**
+– dwr-24-10.pdf p.10
+– dwr-24-10.pdf p.9
+– dwr-24-24.pdf p.10
+– dwr-24-35.pdf p.15
+– dwr-24-35.pdf p.16
+– dwr-24-35.pdf p.5
+– dwr-24-50.pdf p.13

@@ -1,0 +1,13 @@
+Paragraph 1 (Past):
+In the past, France implemented several policies aimed at reducing the cost of electricity for consumers. These policies included a reduction in electricity tax (-3.3), elimination of tax capping for the electricity tax (0.0), and the stabilization of transmission grid fees (-29.3). These measures helped to make electricity more affordable for French households and businesses.
+
+Paragraph 2 (Present):
+Despite these past efforts, France has not met its renewable energy targets. Instead, it is relying heavily on nuclear power for its energy needs. However, France is making strides in other areas, such as heat pump installation, which is prioritized to reduce carbon emissions.
+
+Paragraph 3 (Future):
+To meet its future renewable energy targets, France will need to significantly increase its installed capacity. Around 1.5 GW of development is planned, but this will not be sufficient to reach the target of 2.4 GW of installed capacity set for 2040. France will need to invest in new renewable energy technologies and infrastructure to make up the difference and meet its ambitious goals.
+
+**References**
+– dwr-24-04.pdf p.12
+– dwr-24-04.pdf p.9
+– dwr-24-35.pdf p.15

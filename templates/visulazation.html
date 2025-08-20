@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart Viewer</title>
+    <style>
+        body {
+            background-color: #e6f2ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #cce6ff;
+        }
+        .home-button {
+            text-decoration: none;
+            font-size: 16px;
+            color: #007BFF;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .home-button::before {
+            content: "←";
+            margin-right: 8px;
+        }
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .form-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        select, button {
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .chart-container {
+            margin-top: 30px;
+        }
+        .chart-block {
+            margin-bottom: 40px;
+        }
+        h2 {
+            margin-top: 10px;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="/" class="home-button">Go Back</a>
+    </div>
+
+    <div class="main-content">
+        <h2>📊 Chart Viewer</h2>
+
+        <div class="form-wrapper">
+            <form method="POST" class="form-controls">
+                <label for="topic"><strong>Category:</strong></label>
+                <select name="topic" id="topic" required>
+                    <option value="">-- Choose a category --</option>
+                    {% for topic in topics %}
+                        <option value="{{ topic }}" {% if topic == selected %}selected{% endif %}>{{ topic }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="chart"><strong>Chart Type:</strong></label>
+                <select name="chart" id="chart" required>
+                    <option value="">-- Choose chart type --</option>
+                    {% for chart in chart_types %}
+                        <option value="{{ chart }}" {% if chart == selected_chart_type %}selected{% endif %}>{{ chart }}</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+
+        {% if chart_files %}
+            <div class="chart-container">
+                <h3>Results for <strong>{{ selected }}</strong></h3>
+                {% for label, file in chart_files %}
+                    <div class="chart-block">
+                        <h4>{{ label }}</h4>
+                        <img src="{{ url_for('static', filename='charts/' + file) }}" width="700">
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

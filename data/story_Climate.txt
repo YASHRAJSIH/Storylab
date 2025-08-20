@@ -1,0 +1,13 @@
+| The European Union aims to reduce its greenhouse gas emissions by 40% by 2030 compared to 1990 levels. (EU, 2019) | The transport sector is expected to be the largest contributor to the EU's greenhouse gas emissions in 2030, accounting for approximately 25% of the total. (EU, 2019)
+
+Paragraph 1 (Past):
+In the past, countries have implemented various measures to address climate change, including the introduction of Greenhouse Gas (GHG) quotas. These quotas set limits for the amount of GHG emissions each industry or sector could produce. For instance, the European Union's Emissions Trading System (ETS) introduced GHG quotas for power and industrial sectors. The quotas were set based on historical emissions, with allowances allocated to countries based on their past emissions. However, these quotas did not adequately account for the transport sector, which was responsible for a significant portion of total emissions. To incentivize the adoption of low-emission vehicles, some countries introduced a "conversion bonus" for purchasing a low emission vehicle, and adjustments were made to the GHG quota for the transport sector to encourage change.
+
+Paragraph 2 (Present):
+The present day sees the GHG reduction quota as a crucial tool in the fight against climate change. In Germany, the GHG quota has already been comprehensively tested, and its effectiveness in reducing emissions is evident. However, the transport sector, which accounts for a significant share of total GHG emissions, is not adequately addressed by the current quota system. The high share of the transport sector in total emissions is
+
+Paragraph 3 (Future):
+**References**
+– dwr-24-04.pdf p.10
+– dwr-24-47.pdf p.11
+– dwr-24-47.pdf p.12

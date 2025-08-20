@@ -1,0 +1,18 @@
+---
+
+Paragraph 1: (Past)
+The Macroeconomics Department at DIW Berlin has a rich history in economic policy analysis. Two specialized departments exist within it: one focusing on investments (lpagenhardt@diw.de) and the other on estimating potential output and monetary policy (ktrautmann@diw.de). In the past, the Cycle Policy Group at DIW Berlin contributed significantly to economic policy discussions, particularly in relation to the Economic Policy Uncertainty Index. Despite Germany's strong economic performance, this uncertainty index remained high.
+
+Paragraph 2: (Present)
+Currently, the Research Director of Industrial Policy at DIW is Martin Gornig, and Laura Pagenhardt is a Research Associate in the Forecasting and Economic Analysis department. Additionally, the department of Climate Policy at DIW Berlin is staffed by research associates Sophie Behr, Merve Kucuk, and Till Köveker. Their research focuses on various aspects of economic policy, including industrial policy and climate policy.
+
+Paragraph 3: (Future)
+Looking ahead, economic policy is expected to be quite restrictive in the forecast period, with an average contraction of 0.2% in price-adjusted GDP. Monetary policy will become less restrictive, but economic policy uncertainties pose a risk of real economic contraction, particularly for countries like Ukraine. Overall, the economic outlook is uncertain, with potential challenges arising from both monetary and fiscal policy.
+
+**References**
+– dwr-24-01.pdf p.14
+– dwr-24-35.pdf p.14
+– dwr-24-35.pdf p.16
+– dwr-24-35.pdf p.17
+– dwr-24-45.pdf p.13
+– dwr-24-50.pdf p.13

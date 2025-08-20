@@ -1,0 +1,10 @@
+pdfminer.six>=20221105        # text
+pymupdf>=1.24                 # layout, images, SVG
+pdfplumber>=0.11              # alternative text tool
+pandas>=2.2
+regex
+dateparser
+sentence-transformers>=2.7    # MiniLM for clustering
+scikit-learn
+tqdm
+openpyxl                      # optional: export to Excel

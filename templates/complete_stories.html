@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DIW Weekly Report Story Mode</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f9ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-bar {
+      background-color: #cce6ff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .top-bar a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #007BFF;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .top-bar a i {
+      margin-right: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: "Courier New", Courier, monospace;
+      color: #0b2e59;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .filter-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 20px auto 40px auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .choices__inner {
+      min-height: 45px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn-primary { background-color: #007bff; }
+    .btn-secondary { background-color: #007bff; }
+
+    .story-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .section-heading {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .past { color: #e74c3c; }
+    .present { color: #2ecc71; }
+    .future { color: #2980b9; }
+
+    .chart-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .chart-row img {
+      flex: 1;
+      max-width: 30%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    p em {
+      display: block;
+      text-align: center;
+      margin-top: 50px;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="/generating-stories"><i class="fas fa-arrow-left"></i> Go Back</a>
+  </div>
+
+  <h1><i class="fas fa-book"></i> DIW Weekly Report Story Mode</h1>
+
+  <div class="filter-container">
+    <form method="get">
+      <h2>Filter by Category</h2>
+      <label for="category">Choose Categories</label>
+      <select id="category" name="category" multiple>
+        {% for c in categories %}
+          <option value="{{ c }}" {% if c in selected_categories %}selected{% endif %}>{{ c }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <button class="btn btn-primary" type="submit"><i class="fas fa-filter"></i> Apply Filters</button>
+      <a href="/complete-stories"><button class="btn btn-secondary" type="button"><i class="fas fa-times"></i> Reset</button></a>
+    </form>
+  </div>
+
+  {% if filtered_stories %}
+    {% for category, parts in filtered_stories.items() %}
+      <div class="story-card">
+        <div class="story-title">{{ category }}</div>
+
+        <div class="section-heading past">Past</div>
+        <p>{{ parts.past | safe }}</p>
+
+        <div class="section-heading present">Present</div>
+        <p>{{ parts.present | safe }}</p>
+
+        <div class="section-heading future">Future</div>
+        <p>{{ parts.future | safe }}</p>
+
+        <button class="btn btn-primary" onclick="document.getElementById('chart-{{ loop.index }}').style.display = 'flex';">
+          <i class="fas fa-chart-bar"></i> Generate Visualization
+        </button>
+
+        <div class="chart-row" id="chart-{{ loop.index }}" style="display:none;">
+          <img src="/static/charts/story_{{ category.replace(' ', '_') }}_charts_page_1.png" alt="Chart 1">
+          <img src="/static/charts/story_{{ category.replace(' ', '_') }}_charts_page_2.png" alt="Chart 2">
+          <img src="/static/charts/story_{{ category.replace(' ', '_') }}_charts_page_3.png" alt="Chart 3">
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p><em>No stories match the selected filters.</em></p>
+  {% endif %}
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    const element = document.getElementById('category');
+    const choices = new Choices(element, {
+      removeItemButton: true,
+      placeholderValue: 'Select categories',
+      searchPlaceholderValue: 'Search categories'
+    });
+  </script>
+
+</body>
+</html>

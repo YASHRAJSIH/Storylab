@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compare Category Stories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9ff;
+      padding: 0;
+      margin: 0;
+    }
+
+    .top-bar {
+      background-color: #cce6ff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .top-bar a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #007BFF;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .top-bar a i {
+      margin-right: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003049;
+      margin-top: 30px;
+    }
+
+    .form-box {
+      max-width: 600px;
+      margin: 30px auto 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 16px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .story-box {
+      background: white;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="/generating-stories"><i class="fas fa-arrow-left"></i> Go Back</a>
+  </div>
+
+  <h1><i class="fas fa-book"></i> Combined Stories Across Categories</h1>
+
+  <div class="form-box">
+    <form method="POST">
+      <label for="category1">Category 1</label>
+      <select id="category1" name="category1" required onchange="updateDropdowns()">
+        <option value="">-- Select Category 1 --</option>
+        {% for cat in categories %}
+          <option value="{{ cat }}" {% if cat == selected_1 %}selected{% endif %}>{{ cat }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="category2">Category 2</label>
+      <select id="category2" name="category2" required>
+        <option value="">-- Select Category 2 --</option>
+        {% for cat in categories %}
+          {% if cat != selected_1 %}
+            <option value="{{ cat }}" {% if cat == selected_2 %}selected{% endif %}>{{ cat }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+
+      <button class="btn" type="submit"><i class="fas fa-sync-alt"></i> Combine</button>
+    </form>
+  </div>
+
+  {% if story %}
+    <div class="story-box">
+      <h3>📝 Combined Story: {{ selected_1 }} vs {{ selected_2 }}</h3>
+      <p>{{ story.replace('\n', '<br>') | safe }}</p>
+    </div>
+  {% elif selected_1 and selected_2 %}
+    <div class="story-box">
+      <p style="color: red;"><strong>No story found for this combination.</strong></p>
+    </div>
+  {% endif %}
+
+  <script>
+    function updateDropdowns() {
+      const cat1 = document.getElementById("category1").value;
+      const cat2 = document.getElementById("category2");
+      const selected2 = cat2.value;
+
+      [...cat2.options].forEach(opt => {
+        opt.disabled = opt.value === cat1;
+      });
+
+      if (cat1 === selected2) {
+        cat2.value = "";
+      }
+    }
+
+    window.onload = updateDropdowns;
+  </script>
+
+</body>
+</html>

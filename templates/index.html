@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Economic Pulse Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: url('/static/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    .options {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .option {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 2px solid white;
+      border-radius: 12px;
+      padding: 20px 30px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      text-align: center;
+      width: 220px;
+    }
+
+    .option:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .option i {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .option span {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Economic Pulse Dashboard</h1>
+    <p>Visualizing Economic Insights from DIW Reports</p>
+    <div class="options">
+      <div class="option" onclick="window.location.href='/view-chart'">
+        <i class="fas fa-chart-bar"></i>
+        <span>Generated visulazation</span>
+      </div>
+      <div class="option" onclick="window.location.href='/generating-stories'">
+        <i class="fas fa-book-open"></i>
+        <span>Generated Story</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+| Q3 2022. This is a clear sign that the German economy is not yet out of the woods.
+
+---
+
+Paragraph 1: (Past)
+In the past, countries have used tariffs as a tool to protect their industries during economic crises. For instance, the unemployment rate in Germany increased significantly from 2609 to 2787 to 2854 between 2019 and 2021 (dwr-24-50.pdf p.13). Meanwhile, expenditure components adjusted for import content showed a steep increase (dwr-24-35.pdf p.16). Economies like China, Brazil, and Vietnam have been ramping up re-exports to Russia, but such a tool must be used carefully as it can lead to retaliation and further harm global trade (dwr-24-08.pdf p.10).
+
+Paragraph 2: (Present)
+The current situation in the German industry is worsening, with the crisis leading to an increase of 10 percentage points in the average tariff rate (dwr-24-50.pdf p.11). The European Central Bank (ECB) has set an inflation target, but leading price indicators such as import and whole-sale prices continue to rise, indicating another decline in goods exports is expected in August (dwr-24-35.pdf p.10). The ifo Export Expectations fell for the third time in a row in Q3 2022, signaling that the German economy is not yet out of the woods (dwr-24-35.pdf p.10).
+
+Paragraph 3:
+
+**References**
+– dwr-24-08.pdf p.10
+– dwr-24-21.pdf p.10
+– dwr-24-35.pdf p.10
+– dwr-24-35.pdf p.12
+– dwr-24-35.pdf p.16
+– dwr-24-50.pdf p.11
+– dwr-24-50.pdf p.13
