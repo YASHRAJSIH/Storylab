@@ -1,4 +1,4 @@
-# Story Labs (Gernarted Strory from the data)
+# Story Labs
 
 
 This project works with **DIW reports data** to extract:
